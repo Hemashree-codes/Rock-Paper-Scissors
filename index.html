@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Game Title -->
+        <h1>🪨 Rock Paper Scissors ✂️</h1>
+
+        <!-- Status Message -->
+        <p class="subtitle" id="status-message">
+            👆 Choose your move!
+        </p>
+
+        <!-- Round Counter -->
+        <div class="round-counter">
+            Round: <span id="round-number">0</span> / 5
+        </div>
+
+        <!-- Choice Buttons -->
+        <div class="choices">
+
+            <button class="choice" onclick="playGame('rock')">
+                🪨
+                <span>Rock</span>
+            </button>
+
+            <button class="choice" onclick="playGame('paper')">
+                📄
+                <span>Paper</span>
+            </button>
+
+            <button class="choice" onclick="playGame('scissors')">
+                ✂️
+                <span>Scissors</span>
+            </button>
+
+        </div>
+
+        <!-- Result -->
+        <div class="result">
+
+            <p>
+                You chose:
+                <span id="user-choice">-</span>
+            </p>
+
+            <p>
+                Computer chose:
+                <span id="computer-choice">-</span>
+            </p>
+
+            <h2 id="result-text">
+                Make your choice!
+            </h2>
+
+        </div>
+
+        <!-- Score -->
+        <div class="score">
+
+            <div>
+                <h3>You</h3>
+                <p id="user-score">0</p>
+            </div>
+
+            <div>
+                <h3>Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+
+        </div>
+
+        <!-- Reset Button -->
+        <button class="reset-btn" onclick="resetGame()">
+            🔄 Reset Game
+        </button>
+
+
+        <!-- Final Winner Screen -->
+        <div class="winner-screen" id="winner-screen">
+
+            <div class="winner-box">
+
+                <div class="winner-icon" id="winner-icon">
+                    🏆
+                </div>
+
+                <h2 id="winner-title">
+                    Game Over!
+                </h2>
+
+                <p id="winner-message">
+                    Great game!
+                </p>
+
+                <button class="play-again-btn" onclick="resetGame()">
+                    🔄 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
